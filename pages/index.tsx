@@ -8,15 +8,7 @@ export default function Home() {
       auth: process.env.NOTION_TOKEN,
     });
 
-    const notionData = axios.get(
-      `https://api.notion.com/v1/databases/06428267693b499e81de9b68df43bf43`,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
-          'Notion-Version': '2022-01-06',
-        },
-      },
-    );
+    const notionData = axios.get();
     console.log(notionData);
     console.log(notion);
 
